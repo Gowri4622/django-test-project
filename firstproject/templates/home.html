@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .product {
+            display: inline-block;
+            width: 300px;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Welcome to Our Online Store!</h1>
+
+    {% for product in products %}
+
+    <div class="product">
+        <h2>{{product.title}}</h2>
+        <h3>{{product.price}}</h3>
+        <p>{{product.summary}}</p>
+        <a href="product1.html">Learn More</a>
+    </div>
+
+    {% endfor %}
+  
+
+</body>
+</html>
